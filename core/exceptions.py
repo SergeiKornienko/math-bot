@@ -8,18 +8,18 @@ class MathBotError(Exception):
 
 
 class TokenizerError(MathBotError):
-    """Raised when a string cannot be tokenized (unknown symbol)."""
+    """Raised when a string cannot be tokenized."""
 
     pass
 
 
 class ParsingError(MathBotError):
-    """Raised when token sequence has invalid syntax (unmatched parenthesis, wrong order)."""
+    """Raised when token sequence has invalid syntax."""
 
     pass
 
 
 class EvaluationError(MathBotError):
-    """Raised when a valid expression cannot be evaluated (division by zero, overflow)."""
+    """Raised when expression cannot be evaluated."""
 
     pass

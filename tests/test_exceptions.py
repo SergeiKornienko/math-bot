@@ -1,7 +1,12 @@
 """Tests for the exception hierarchy."""
 
 import pytest
-from core.exceptions import MathBotError, TokenizerError, ParsingError, EvaluationError
+from core.exceptions import (
+    MathBotError,
+    TokenizerError,
+    ParsingError,
+    EvaluationError,
+)
 
 
 def test_exceptions_hierarchy():
@@ -37,4 +42,6 @@ def test_catch_all_by_base():
         except MathBotError:
             pass
         else:
-            pytest.fail(f"{error_class.__name__} not caught as MathBotError")
+            pytest.fail(
+                f"{error_class.__name__} not caught as MathBotError"
+            )
